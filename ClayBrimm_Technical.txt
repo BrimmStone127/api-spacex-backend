@@ -1,6 +1,6 @@
 Blue Onion Labs Take Home Test
 Clayton Brimm
-2/9/2021
+2/27/2021
 
 Goals
 - Import SpaceX sattelite data as time series into a data base.
@@ -34,6 +34,11 @@ FROM starlink
 WHERE satellite_id = '60106f1fe900d60006e32cb2' 
 AND creation_date = '2020-08-19 06:26:10';
 
+Results:
+ longitude | latitude 
+-----------+----------
+       149 |       -1
+
 You can also query for the closest time to a given date using this query, in this example we query for the position nearest to July 4th 2020:
 
 SELECT longitude, latitude 
@@ -41,6 +46,11 @@ FROM starlink WHERE satellite_id = '60106f1fe900d60006e32cb2'
 AND creation_date < '2020-07-04 01:00:00' 
 ORDER BY creation_date DESC
 LIMIT 1;
+
+Results:
+ longitude | latitude 
+-----------+----------
+       163 |       -1
 
 
          (__)   (Have a nice day!) 
