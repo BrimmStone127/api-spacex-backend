@@ -1,6 +1,6 @@
 Blue Onion Labs Take Home Test
 Clayton Brimm
-2/9/2021
+2/27/2021
 
 Goals
 - Import SpaceX sattelite data as time series into a data base.
@@ -29,3 +29,11 @@ python startlink.py
 
 6. Using the psql terminal again, use this query to find the long and lat of a specific satellite at a given time
 SELECT longitude, latitude FROM starlink WHERE satellite_id = '60106f1fe900d60006e32cb2' AND creation_date = '2020-08-19 06:26:10';
+
+
+         (__)   (Have a nice day!) 
+         (oo)    
+  /-------\/     
+ / |     ||
+*  ||----||
+   ^^    ^^   
