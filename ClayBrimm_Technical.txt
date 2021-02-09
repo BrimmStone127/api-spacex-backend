@@ -24,4 +24,8 @@ psql -h localhost -U postgres
 4. Using the psql shell, create a table named starlink to store all of our data
 CREATE TABLE starlink (id serial PRIMARY KEY, creation_date TIMESTAMP, satellite_id VARCHAR(50), longitude INT, latitude INT);
 
+5. Run the python script starlink.py to parse the starlink historical data and insert it into the starlink db.
+python startlink.py
+
+6. Using the psql terminal again, use this query to find the long and lat of a specific satellite at a given time
 SELECT longitude, latitude FROM starlink WHERE satellite_id = '60106f1fe900d60006e32cb2' AND creation_date = '2020-08-19 06:26:10';
