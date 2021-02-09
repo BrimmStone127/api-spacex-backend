@@ -1,0 +1,27 @@
+Blue Onion Labs Take Home Test
+Clayton Brimm
+2/27/2021
+
+Goals
+- Import SpaceX sattelite data as time series into a data base.
+- Be able to query the data to determine the last known longitude and latitude of the sattelite for a given time.
+
+Requirements
+- Python3
+- psycopg2
+- Docker
+
+1. Pull Postgres Docker image
+docker pull postgres
+
+2. Setup postgres database named dev-postgres to run locally on port 5432
+docker run -d --name dev-postgres -p 5432:5432 -e POSTGRES_PASSWORD=admin123 postgres
+
+3. Open the instances bash shell and then connect to the database using psql
+docker exec -it dev-postgres bash
+psql -h localhost -U postgres
+
+4. Using the psql shell, create a table named starlink to store all of our data
+CREATE TABLE starlink (id serial PRIMARY KEY, creation_date TIMESTAMP, satellite_id VARCHAR(50), longitude INT, latitude INT);
+
+SELECT longitude, latitude FROM starlink WHERE satellite_id = '60106f1fe900d60006e32cb2' AND creation_date = '2020-08-19 06:26:10';
