@@ -1,6 +1,6 @@
 Blue Onion Labs Take Home Test
 Clayton Brimm
-2/27/2021
+2/9/2021
 
 Goals
 - Import SpaceX sattelite data as time series into a data base.
